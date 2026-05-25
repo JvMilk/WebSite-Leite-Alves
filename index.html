@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conceito Esquadrias e Vidros</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Logo header — enquadrada sem perda de qualidade */
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+    }
+    .logo-wrap img {
+      height: 64px !important;
+      width: auto;
+      max-width: 200px;
+      object-fit: contain;
+      object-position: left center;
+      display: block;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+    }
+
+    /* Hero logo display — tamanho adaptado à imagem, sem corte */
+    .hero-logo-display {
+      overflow: visible !important;
+    }
+    .hero-logo-display img {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      display: block;
+      object-fit: contain;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+      transform: none !important;
+    }
+
+    /* Sobre frame — altura automática, adaptada à imagem */
+    .sobre-img-frame {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: auto !important;
+      overflow: visible;
+    }
+    .sobre-img-frame img {
+      width: 100% !important;
+      height: auto !important;
+      max-width: 100%;
+      object-fit: contain !important;
+      padding: 1rem !important;
+      box-sizing: border-box;
+      display: block;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+      transform: none !important;
+    }
+
+    /* Bootstrap icon sizing in feature items */
+    .feature-icon svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    /* Info card icons — svg sizing */
+    .info-card-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .info-card-icon svg {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    /* Footer brand logo — slightly smaller, sharp */
+    .footer-brand img {
+      max-width: 140px !important;
+      height: auto !important;
+      object-fit: contain;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="header">
+    <a href="index.html" class="logo-wrap">
+      <img src="logo.png" alt="Conceito Esquadrias e Vidros">
+    </a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Início</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="contatos.html">Contatos</a></li>
+        <li><a href="formulario.html" class="nav-cta">Agendar Visita</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <!-- INSTAGRAM FAB -->
+  <a href="https://www.instagram.com/conceitoesquadriasevidros/?theme=dark" target="_blank" class="insta-fab" title="Siga no Instagram">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+    </svg>
+    <span>Instagram</span>
+  </a>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="hero-accent"></div>
+    <div class="hero-content">
+      <div class="hero-text fade-up">
+        <div class="hero-badge">Patos de Minas · MG</div>
+        <h1 class="hero-title">
+          Excelência<br>
+          <span>em Vidros</span><br>
+          e Esquadrias
+        </h1>
+        <p class="hero-subtitle">Transformamos ambientes com qualidade e design há 8 anos.</p>
+        <p class="hero-desc">
+          A Conceito Esquadrias e Vidros, de Patos de Minas, é especializada em esquadrias de alumínio e soluções em vidro, oferecendo qualidade, modernidade e acabamento sofisticado para projetos residenciais e comerciais.
+        </p>
+        <div class="hero-buttons">
+          <a href="formulario.html" class="btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+            Agendar Visita
+          </a>
+          <a href="galeria.html" class="btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            Ver Portfólio
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual fade-up" style="transition-delay:0.2s">
+        <div class="hero-logo-display">
+          <img src="logo.png" alt="Conceito Esquadrias e Vidros">
+        </div>
+        <div class="hero-stats">
+          <div class="stat-card">
+            <div class="stat-number">8</div>
+            <div class="stat-label">Anos</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Obras</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">99%</div>
+            <div class="stat-label">Satisfação</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="orange-divider">
+
+  <!-- SOBRE -->
+  <section class="section sobre-section" id="sobre">
+    <div class="section-inner">
+      <div class="sobre-grid">
+        <div class="fade-up">
+          <div class="sobre-visual">
+            <div class="sobre-img-frame" style="background:#2E3134; border-radius:8px;">
+              <img src="fachada.png" alt="Fachada Conceito">
+            </div>
+            <div class="sobre-tag">
+              8 Anos
+              <span>de Mercado</span>
+            </div>
+          </div>
+        </div>
+        <div class="fade-up" style="transition-delay:0.15s">
+          <div class="section-label">Sobre a Empresa</div>
+          <h2 class="section-title">Quem Somos</h2>
+          <p class="section-desc">
+            A <strong>Conceito Esquadrias e Vidros</strong> nasceu do compromisso com a excelência em soluções para fachadas e interiores. Sediada em Patos de Minas–MG, atendemos projetos residenciais, comerciais e industriais com rigor técnico e alto padrão estético.
+          </p>
+          <p style="font-size:0.95rem;color:rgba(240,238,235,0.65);line-height:1.7;margin-bottom:2rem;">
+            Nossa equipe de profissionais experientes está pronta para transformar sua ideia em realidade — desde o projeto até a instalação — com tecnologia, segurança e beleza em cada detalhe.
+          </p>
+          <div class="sobre-features">
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-check-fill" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5m8.854-9.646a.5.5 0 0 0-.708-.708L7.5 7.793 6.354 6.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4>Qualidade Certificada</h4>
+                <p>Materiais de primeira linha com garantia em todas as instalações realizadas.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                  <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                  <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4>Projetos Personalizados</h4>
+                <p>Cada obra é única. Desenvolvemos soluções sob medida para cada cliente.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hammer" viewBox="0 0 16 16">
+                  <path d="M9.972 2.508a.5.5 0 0 0-.16-.556l-.178-.129a5 5 0 0 0-2.076-.783C6.215.862 4.504 1.229 2.84 3.133H1.786a.5.5 0 0 0-.354.147L.146 4.567a.5.5 0 0 0 0 .706l2.571 2.579a.5.5 0 0 0 .708 0l1.286-1.29a.5.5 0 0 0 .146-.353V5.57l8.387 8.873A.5.5 0 0 0 14 14.5l1.5-1.5a.5.5 0 0 0 .017-.689l-9.129-8.63c.747-.456 1.772-.839 3.112-.839a.5.5 0 0 0 .472-.334"/>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4>Instalação Própria</h4>
+                <p>Equipe técnica especializada do início ao fim do projeto.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="orange-divider">
+
+  <!-- LOCALIZAÇÃO -->
+  <section class="section" id="localizacao" style="background:var(--dark);">
+    <div class="section-inner">
+      <div class="section-label">Onde Estamos</div>
+      <h2 class="section-title">Nossa Localização</h2>
+      <p class="section-desc">Venha nos visitar em Patos de Minas e conheça nosso showroom com amostras de todos os produtos.</p>
+      <div class="localizacao-grid fade-up">
+        <div class="map-placeholder">
+          <a href="https://maps.app.goo.gl/L63xxG5TMkzb7UoS9" target="_blank" rel="noopener noreferrer" style="display:block;width:100%;height:100%;position:relative;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.2!2d-46.5215!3d-18.5793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zUi4gT3VybyBQcmV0bywgNDY1IC0gU2FudG8gQW50w7NuaW8sIFBhdG9zIGRlIE1pbmFzIC0gTUc!5e0!3m2!1spt-BR!2sbr!4v1"
+              allowfullscreen=""
+              loading="lazy"
+              style="pointer-events:none;width:100%;height:100%;border:0;"></iframe>
+            <div style="position:absolute;inset:0;cursor:pointer;" title="Ver no Google Maps"></div>
+          </a>
+        </div>
+        <div class="info-cards">
+          <div class="info-card">
+            <div class="info-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+              </svg>
+            </div>
+            <div>
+              <h4>Endereço</h4>
+              <p>R. Ouro Preto, 465 - Santo Antônio, Patos de Minas - MG, 38700-368</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+              </svg>
+            </div>
+            <div>
+              <h4>Telefone Principal</h4>
+              <p>(034) 3814-7600</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+              </svg>
+            </div>
+            <div>
+              <h4>Horário de Atendimento</h4>
+              <p>Seg–Qui: 07h–17h30 · Sex: 07h–16h30</p>
+            </div>
+          </div>
+          <a href="formulario.html" class="btn-primary" style="margin-top:0.5rem;width:100%;justify-content:center;">
+            Agendar Visita Agora
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="logo.png" alt="Conceito Esquadrias e Vidros">
+          <p>Soluções em esquadrias de alumínio, vidros, guarda-corpos e persianas para obras residenciais, comerciais e industriais em Patos de Minas e região.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="index.html">▸ Início</a></li>
+            <li><a href="galeria.html">▸ Galeria</a></li>
+            <li><a href="contatos.html">▸ Contatos</a></li>
+            <li><a href="formulario.html">▸ Agendamento</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Produtos</h4>
+          <ul>
+            <li><a href="galeria.html">▸ Esquadrias</a></li>
+            <li><a href="galeria.html">▸ Guarda-corpos</a></li>
+            <li><a href="galeria.html">▸ Pele de Vidro</a></li>
+            <li><a href="galeria.html">▸ Persianas</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2025 <span>Conceito Esquadrias e Vidros</span>. Todos os direitos reservados.</p>
+        <a href="https://instagram.com/conceitoesquadriasevidros" target="_blank" style="color:var(--light-gray);font-size:0.85rem;display:flex;align-items:center;gap:0.4rem;transition:var(--transition);" onmouseover="this.style.color='#E8821A'" onmouseout="this.style.color=''">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          @conceitoesquadriasevidros
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Hamburger
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+
+    // Fade-up observer
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
